@@ -83,7 +83,12 @@
 
 ### demo
 
-| 图片           |        option        |   
-| -------------- | :----------------: | -------------------------------------------------------------: |
-| valToColormeta | val, max, min, isA | 通过当前值的比例（比如 0.3），计算 min 和 max 中间对应比例的值 |
+| 图片                                                                                                 |      option       |
+| ---------------------------------------------------------------------------------------------------- | :---------------: |
+| ![vertical](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/vertival.png?raw=true) | {type:'vertical'} |
 
+| ![horizontal](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/horizontal.png?raw=true) |{type:'horizontal'} |
+
+| ![circle](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/circle.png?raw=true) |{type:'circle'} |
+
+| ![semi-circle](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/semi-bottom.png?raw=true) |{type:'semi-circle',centerPosition: 'bottom'} |

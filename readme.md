@@ -15,8 +15,7 @@
 
 ### 补充说明
 
-> 这个库刚写完，使用 ES6 进行编写，发布的是源码包，还未经过编译成 ES5 语法
-> 所以使用的时候可以直接拷贝 src 下的 digitalGauge.js
+> 如何使用报错，请拷贝 src 下的 digitalGauge 到项目中，通过 import 直接导入
 
 ### 配置项（option）
 

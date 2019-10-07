@@ -67,12 +67,11 @@
 
 ### 实例方法
 
-| 方法      |       参数       |                                                         说明 |
-| --------- | :--------------: | -----------------------------------------------------------: |
-| setOption | option forceLoad | option 用于覆盖配置 forceLoad 为 true 会重新生成 canvas 节点 |
-
-| setValue | value noAnimation | value 值 noAnimation 强制不适用动画 |
-| resize | [size] | 重新计算尺寸,不传会自动根据 dom 计算,传入则应包含 w（宽） h（高） |
+| 方法      |       参数        |                                                              说明 |
+| --------- | :---------------: | ----------------------------------------------------------------: |
+| setOption | option forceLoad  |      option 用于覆盖配置 forceLoad 为 true 会重新生成 canvas 节点 |
+| setValue  | value noAnimation |                               value 值 noAnimation 强制不适用动画 |
+| resize    |      [size]       | 重新计算尺寸,不传会自动根据 dom 计算,传入则应包含 w（宽） h（高） |
 
 ### 工具函数
 

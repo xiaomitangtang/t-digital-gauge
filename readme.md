@@ -83,12 +83,9 @@
 
 ### demo
 
-| 图片                                                                                                 |      option       |
-| ---------------------------------------------------------------------------------------------------- | :---------------: |
-| ![vertical](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/vertival.png?raw=true) | {type:'vertical'} |
-
-| ![horizontal](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/horizontal.png?raw=true) |{type:'horizontal'} |
-
-| ![circle](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/circle.png?raw=true) |{type:'circle'} |
-
-| ![semi-circle](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/semi-bottom.png?raw=true) |{type:'semi-circle',centerPosition: 'bottom'} |
+| 图片                                                                                                       |                    option                     |
+| ---------------------------------------------------------------------------------------------------------- | :-------------------------------------------: |
+| ![vertical](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/vertival.png?raw=true)       |               {type:'vertical'}               |
+| ![horizontal](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/horizontal.png?raw=true)   |              {type:'horizontal'}              |
+| ![circle](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/circle.png?raw=true)           |                {type:'circle'}                |
+| ![semi-circle](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/semi-bottom.png?raw=true) | {type:'semi-circle',centerPosition: 'bottom'} |

@@ -1,0 +1,19 @@
+{
+  "name": "t-digital-gauge",
+  "version": "1.0.0",
+  "description": "a pure canvas gauge ",
+  "main": "./src/digitalGauge.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "canvas",
+    "digital",
+    "gauge",
+    "仪表盘",
+    "数字仪表盘",
+    "仪表板"
+  ],
+  "author": "tcmiao",
+  "license": "ISC"
+}

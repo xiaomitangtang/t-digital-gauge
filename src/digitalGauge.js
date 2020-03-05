@@ -6,9 +6,8 @@ const COLOR_TYPE_FIXED = "fixed";
 const COLOR_TYPE_STEP_SINGLE = "stepSingle";
 const COLOR_TYPE_STEP_MULTIPLE = "stepMultiple";
 const COLOR_TYPE_GRADIENT = "gradual";
-
 const PI = Math.PI;
-export class DigitalGauge {
+class DigitalGauge {
   dom = null;
   canvas = null;
   ctx = null;
@@ -21,12 +20,12 @@ export class DigitalGauge {
   defaultOption = {
     type: VERTIVAL_TYPE, //见上面的type
     value: 90, //
+    unit: '',
     min: 0,
     max: 100,
     tickWidthPercent: 0.3,
     minTickWidth: 20,
     maxTickWidth: 60,
-
     lineCap: "butt", //square  butt  round
     backgroundColor: "#eee",
     foreColor: "#00ff00",
@@ -94,6 +93,12 @@ export class DigitalGauge {
       valueTextBaseline: "middle",
       minLabelTextBaseline: "top",
       maxLabelTextBaseline: "top",
+
+      subText: "",
+      subTextOffset: [0, 0],
+      subTextColor: '',
+      subTextAlign: 'center',
+      subTextBaseline: "top",
       tickRatio: 10,
       BlankTickRatio: 1,
       startArg: 0,
@@ -562,18 +567,30 @@ export class DigitalGauge {
     }
 
     // label
+    let font = this.getFZ(minR);
+    let valColor = this.calcColor(val / 100);
+    let w = minR - 4;
     if (this.option.showValue) {
-      let text = this.option.value;
-      let font = this.getFZ(minR);
-      let textAlign = this.option.valueTextAlign;
-      let textBaseline = this.option.valueTextBaseline;
-      let fillStyle = this.calcColor(val / 100);
-      let [x, y] = this.option.valueOffset;
+      let { value, unit, valueTextAlign, valueTextBaseline, valueOffset } = this.option
+      let text = value + unit
+
+      let [x, y] = valueOffset;
       x = centerX + x;
       y = centerY + y;
-      let w = minR - 4;
-      this.drawText(text, x, y, font, fillStyle, textAlign, textBaseline, 0, w);
+
+      this.drawText(text, x, y, font, valColor, valueTextAlign, valueTextBaseline, 0, w);
     }
+    if (this.option.subText) {
+      let { subText, subTextColor, subTextOffset, subTextAlign, subTextBaseline } = this.option
+      let subFont = this.getFZ(minR / 2.5)
+      let extraOffsetY = this.getFZ(minR / 2, true)
+      let [x, y] = subTextOffset;
+      x = centerX + x;
+      y = centerY + y + extraOffsetY;
+      let fillStyle = subTextColor || valColor
+      this.drawText(subText, x, y, subFont, fillStyle, subTextAlign, subTextBaseline, 0, w);
+    }
+
   }
   drawSemiCircle(val) {
     // background
@@ -788,7 +805,7 @@ export class DigitalGauge {
         maxLabelRotate
       );
     }
-
-    //
   }
 }
+
+export default DigitalGauge

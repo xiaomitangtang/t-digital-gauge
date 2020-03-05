@@ -369,16 +369,15 @@ class DigitalGauge {
     // this.ctx.closePath();
     // label
     if (this.option.showValue) {
-      let text = this.option.value;
+      let { value, unit, valueTextAlign, valueTextBaseline, valueOffset } = this.option
+      let text = value + unit
       let font = this.getFZ(tickWidth);
-      let textAlign = this.option.valueTextAlign;
-      let textBaseline = this.option.valueTextBaseline;
       let fillStyle = this.calcColor(val / 100);
-      let [x, y] = this.option.valueOffset;
+      let [x, y] = valueOffset;
       x = centerX + x;
       y = maxH + y;
       let w = tickWidth - 4;
-      this.drawText(text, x, y, font, fillStyle, textAlign, textBaseline, 0, w);
+      this.drawText(text, x, y, font, fillStyle, valueTextAlign, valueTextBaseline, 0, w);
     }
     if (this.option.showMinLabel) {
       let text = this.option.min;
@@ -449,12 +448,11 @@ class DigitalGauge {
     // this.ctx.closePath();
     // label
     if (this.option.showValue) {
-      let text = this.option.value;
+      let { value, unit, valueTextAlign, valueTextBaseline, valueOffset } = this.option
+      let text = value + unit
       let font = this.getFZ(tickWidth);
-      let textAlign = this.option.valueTextAlign;
-      let textBaseline = this.option.valueTextBaseline;
       let fillStyle = this.calcColor(val / 100);
-      let [x, y] = this.option.valueOffset;
+      let [x, y] = valueOffset;
       x = minL + x;
       y = centerY + y;
       let w = tickWidth - 4;
@@ -464,8 +462,8 @@ class DigitalGauge {
         y,
         font,
         fillStyle,
-        textAlign,
-        textBaseline,
+        valueTextAlign,
+        valueTextBaseline,
         90,
         w
       );
@@ -753,16 +751,15 @@ class DigitalGauge {
 
     // label
     if (this.option.showValue) {
-      let text = this.option.value;
+      let { value, unit, valueTextAlign, valueTextBaseline, valueOffset } = this.option
+      let text = value + unit;
       let font = this.getFZ(minR);
-      let textAlign = this.option.valueTextAlign;
-      let textBaseline = this.option.valueTextBaseline;
       let fillStyle = this.calcColor(val / 100);
-      let [x, y] = this.option.valueOffset;
+      let [x, y] = valueOffset;
       x = centerX + x;
       y = centerY + y;
       let w = minR - 4;
-      this.drawText(text, x, y, font, fillStyle, textAlign, textBaseline, 0, w);
+      this.drawText(text, x, y, font, fillStyle, valueTextAlign, valueTextBaseline, 0, w);
     }
 
     if (this.option.showMinLabel) {

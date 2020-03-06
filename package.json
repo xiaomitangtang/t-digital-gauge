@@ -1,6 +1,6 @@
 {
   "name": "t-digital-gauge",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "a pure canvas gauge ",
   "main": "./dist/digitalGauge.js",
   "scripts": {

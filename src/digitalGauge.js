@@ -124,6 +124,8 @@ class DigitalGauge {
       endArg: 2 * PI
     }
   };
+  option = {}
+  lastOption = {}
   constructor(dom, option) {
     this.dom = dom;
     this.draw = this.draw.bind(this);
@@ -151,11 +153,20 @@ class DigitalGauge {
       type = this.defaultOption.type;
     }
     typeOption = this.gaugeOptionForType[type];
-    this.option = {
-      ...this.defaultOption,
-      ...typeOption,
-      ...option
-    };
+    if (forceLoad) {
+      this.option = {
+        ...this.defaultOption,
+        ...typeOption,
+        ...option
+      };
+    } else {
+      this.option = {
+        ...this.option,
+        ...option
+      }
+    }
+
+
     if (forceLoad) {
       this.initGauge();
     } else {

@@ -76,7 +76,7 @@ class DigitalGauge {
   dashThickness = 1; //donut 模式下的间隔
   stripBasic = 2;
   gaugeColor = '#eeeeee'; //背景条的颜色
-  defaultColor = '#ef9a9a'; //前景色
+  defaultColor = '#65a0f8'; //前景色
   timestampFormat = 'yyyy-MM-dd HH:mm:ss';
 
   _init() {

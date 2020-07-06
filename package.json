@@ -1,5 +1,5 @@
 {
-  "name": "digital-gauge",
+  "name": "t-digital-gauge2",
   "version": "0.0.1",
   "description": "a pure canvas gauge ",
   "main": "./dist/digitalGauge.js",

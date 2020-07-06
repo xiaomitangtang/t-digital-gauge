@@ -1,8 +1,8 @@
 {
-  "name": "t-digital-gauge",
-  "version": "1.0.7",
+  "name": "digital-gauge",
+  "version": "0.0.1",
   "description": "a pure canvas gauge ",
-  "main": "./dist/index.js",
+  "main": "./dist/digitalGauge.js",
   "scripts": {
     "build": "webpack --config build/webpack.config.build.js",
     "dev": "webpack-dev-server --config build/webpack.config.dev.js"

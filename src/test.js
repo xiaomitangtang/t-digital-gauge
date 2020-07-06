@@ -1,4 +1,5 @@
 // import { Knob, Swtich, DigitalGauge } from '../dist/digitalGauge'
+// 老版本是1.05
 import { Knob, Swtich, DigitalGauge } from './index'
 let knobBOX = document.getElementById('knob')
 let swtichBOX = document.getElementById('swtich')

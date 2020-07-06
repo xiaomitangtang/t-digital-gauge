@@ -22,5 +22,18 @@
   <div id="swtich" class="box"></div>
   <div id="digitalgaige" class="box"></div>
 </body>
+<script src="./dist/digitalGauge.js"></script>
+<script>
+  let knobBOX = document.getElementById('knob')
+  let swtichBOX = document.getElementById('swtich')
+  let digitalgaigeBOX = document.getElementById('digitalgaige')
+  let knob = new Knob(knobBOX)
+  let swtich = new Swtich(swtichBOX)
+  let digitalgaige = new DigitalGauge(digitalgaigeBOX)
+
+  setInterval(() => {
+    digitalgaige.value = Math.random() * 100
+  }, 2000)
+</script>
 
 </html>

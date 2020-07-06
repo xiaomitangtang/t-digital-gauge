@@ -1,6 +1,6 @@
 {
   "name": "t-digital-gauge",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "a pure canvas gauge ",
   "main": "./dist/digitalGauge.js",
   "scripts": {
@@ -38,6 +38,11 @@
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
-    "core-js": "^2.6.11"
+    "core-js": "^2.6.11",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
+    "less-loader": "^6.2.0",
+    "moment": "^2.27.0",
+    "style-loader": "^1.2.1"
   }
 }

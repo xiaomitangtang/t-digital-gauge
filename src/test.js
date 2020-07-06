@@ -1,8 +1,12 @@
-import DigitalGauge from './digitalGauge.js'
-let dom = document.getElementById('root')
-let option = {
-  type: 'circle',
-  unit: ""
-}
-let chart = new DigitalGauge(dom, option)
-window.chart = chart
+import { Knob, Swtich, DigitalGauge } from './index'
+let knobBOX = document.getElementById('knob')
+let swtichBOX = document.getElementById('swtich')
+let digitalgaigeBOX = document.getElementById('digitalgaige')
+
+let knob = new Knob(knobBOX)
+let swtich = new Swtich(swtichBOX)
+let digitalgaige = new DigitalGauge(digitalgaigeBOX)
+
+setInterval(() => {
+  digitalgaige.value = Math.random() * 100
+}, 2000)

@@ -18,6 +18,14 @@ module.exports = {
     rules: [
       {
         test: /.js$/, loader: "babel-loader"
+      },
+      {
+        test: /.svg$/, loader: "file-loader"
+      },
+      {
+        test: /.less$/, use: [
+          'style-loader', 'css-loader', 'less-loader'
+        ]
       }
     ]
   },

@@ -1,0 +1,96 @@
+.digital-gauge {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.digital-gauge .digital-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.digital-gauge .digital-texts {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.digital-gauge .digital-texts .digital-title {
+  text-align: center;
+  font-size: 30px;
+}
+.digital-gauge .digital-texts .digital-value {
+  text-align: center;
+  flex: 1;
+}
+.digital-gauge .digital-texts .digital-time {
+  text-align: center;
+}
+.digital-gauge .digital-minmax {
+  position: absolute;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 50px 0;
+  top: 0;
+  left: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.horizontalBar .digital-minmax {
+  left: 0;
+  top: 50%;
+  height: auto;
+  width: 100%;
+  flex-direction: row-reverse;
+  padding: 0 50px;
+}
+.donut .digital-minmax {
+  display: none;
+}
+.donut .digital-texts .digital-title {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.donut .digital-texts .digital-value {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.donut .digital-texts .digital-time {
+  flex: 3;
+}
+.arc .digital-minmax {
+  left: 0;
+  top: 50%;
+  height: auto;
+  width: 100%;
+  flex-direction: row-reverse;
+  padding: 0 50px;
+}
+.arc .digital-texts {
+  justify-content: flex-end;
+}
+.arc .digital-texts .digital-title {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.arc .digital-texts .digital-value {
+  flex: 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.arc .digital-texts .digital-time {
+  flex: 1;
+}

@@ -13,7 +13,9 @@
     "gauge",
     "仪表盘",
     "数字仪表盘",
-    "仪表板"
+    "仪表板",
+    "knob",
+    "swtch"
   ],
   "devDependencies": {
     "@babel/cli": "^7.8.4",

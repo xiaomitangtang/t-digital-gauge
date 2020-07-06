@@ -33,3 +33,5 @@
 
 ![demo](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/1.png)
 ![demo](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/2.png)
+![knob](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/4.png)
+![swtich](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/3.png)

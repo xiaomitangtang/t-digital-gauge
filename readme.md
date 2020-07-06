@@ -47,33 +47,32 @@
 
 #### digital-gauge
 
-| 参数              | 说明                | 备注                                                     |
-| :---------------- | :------------------ | :------------------------------------------------------- |
-| minValue          | 最小值              |                                                          |
-| maxValue          | 最大值              |                                                          |
-| title             | 标题                |                                                          |
-| time              | 时间                |                                                          |
-| unitTitle         | 单位标题            | 不显示时间时有效                                         |
-| value             | 展示的数值          |                                                          |
-| showMinMax        | 是否展示极值        | donut 无效                                               |
-| showTitle         | 是否展示标题        |                                                          |
-| showTimestamp     | 是否展示时间        |                                                          |
-| showUnitTitle     | 是否展示单位标题    | 展示时间时强制不展示                                     |
-| gaugeType         | gauge 的类型        | horizontalBar：水平 verticalBar：竖直 donut 圆 arc：半圆 |
-| gaugeWidthScale   | canvas 笔画相对大小 | 1 为宽或高的 1/3                                         |
-| titleFont         | 标题样式            |                                                          |
-| labelFont         | label 样式          |                                                          |
-| valueFont         | value 样式          |                                                          |
-| minMaxFont        | 极值样式            |                                                          |
-| levelColors       | 梯度色值            |                                                          |
-| animation         | 动画                |                                                          |
-| animationDuration | 动画持续时间        |                                                          |
-| roundedLineCap    | canvas 笔帽         |                                                          |
-
-| stripBasic | 基本间隔 | 2px 或 2° |
-| dashThickness | 条形间隔 | |
-| gaugeColor | 背景色 | |
-| defaultColor | 不设置 levelColors 时的默认颜色 | |
+| 参数              | 说明                            | 备注                                                     |
+| :---------------- | :------------------------------ | :------------------------------------------------------- |
+| minValue          | 最小值                          |                                                          |
+| maxValue          | 最大值                          |                                                          |
+| title             | 标题                            |                                                          |
+| time              | 时间                            |                                                          |
+| unitTitle         | 单位标题                        | 不显示时间时有效                                         |
+| value             | 展示的数值                      |                                                          |
+| showMinMax        | 是否展示极值                    | donut 无效                                               |
+| showTitle         | 是否展示标题                    |                                                          |
+| showTimestamp     | 是否展示时间                    |                                                          |
+| showUnitTitle     | 是否展示单位标题                | 展示时间时强制不展示                                     |
+| gaugeType         | gauge 的类型                    | horizontalBar：水平 verticalBar：竖直 donut 圆 arc：半圆 |
+| gaugeWidthScale   | canvas 笔画相对大小             | 1 为宽或高的 1/3                                         |
+| titleFont         | 标题样式                        |                                                          |
+| labelFont         | label 样式                      |                                                          |
+| valueFont         | value 样式                      |                                                          |
+| minMaxFont        | 极值样式                        |                                                          |
+| levelColors       | 梯度色值                        |                                                          |
+| animation         | 动画                            |                                                          |
+| animationDuration | 动画持续时间                    |                                                          |
+| roundedLineCap    | canvas 笔帽                     |                                                          |
+| stripBasic        | 基本间隔                        | 2px 或 2°                                                |
+| dashThickness     | 条形间隔                        |                                                          |
+| gaugeColor        | 背景色                          |                                                          |
+| defaultColor      | 不设置 levelColors 时的默认颜色 |                                                          |
 
 ### demo
 

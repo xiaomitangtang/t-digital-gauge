@@ -1,3 +1,4 @@
+// import { Knob, Swtich, DigitalGauge } from '../dist/digitalGauge'
 import { Knob, Swtich, DigitalGauge } from './index'
 let knobBOX = document.getElementById('knob')
 let swtichBOX = document.getElementById('swtich')

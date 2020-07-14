@@ -100,6 +100,8 @@ class DigitalGauge {
   }
   ctx = null;
   initDom() {
+    this.$el.innerHtml = ''
+    this.$el.innerText = ''
     const box = render('div', { className: `digital-gauge ${this.gaugeType}` }, this.$el);
     const canvas = render('canvas', { className: `digital-canvas` }, box);
     this.ctx = canvas.getContext('2d');

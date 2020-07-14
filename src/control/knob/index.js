@@ -35,6 +35,8 @@ class Knob {
     // const { minValue = 0, maxValue = 100, title, bgColor = '#000', tickCellArg = 3, value = 0, onChange = noop, decimals = 2, errorMsg = '' } = options
   }
   initDom() {
+    this.$el.innerHtml = ''
+    this.$el.innerText = ''
     const rlwrapper = render('div', { className: 'knob-box' }, this.$el);
     const box = render('div', { className: 'knob-control-box' }, rlwrapper);
     const bgDiv = render('div', { className: 'knob-bg' }, box);

@@ -26,6 +26,8 @@ class Switch {
   }
   onChange = noop;
   initDom() {
+    this.$el.innerHtml = ''
+    this.$el.innerText = ''
     const box = render(
       'div',
       {

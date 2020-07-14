@@ -11,7 +11,8 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: "digitalGauge.js",
+    publicPath: "./",
+    filename: "index.js",
     libraryTarget: "commonjs2"
     // libraryTarget: "umd"
   },
@@ -24,11 +25,21 @@ module.exports = {
         test: /.js$/, loader: "babel-loader"
       },
       {
-        test: /.svg$/, loader: "file-loader"
+        test: /.svg$/,
+        use: {
+          loader: 'url-loader', options: {
+            limit: 20000
+          }
+        }
       },
       {
         test: /.less$/, use: [
           'style-loader', 'css-loader', 'less-loader'
+        ]
+      },
+      {
+        test: /.css$/, use: [
+          'style-loader', 'css-loader'
         ]
       }
     ]

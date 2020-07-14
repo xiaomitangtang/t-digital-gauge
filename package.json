@@ -1,8 +1,8 @@
 {
   "name": "t-digital-gauge2",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "a pure canvas gauge ",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "webpack --config build/webpack.config.build.js",
     "dev": "webpack-dev-server --config build/webpack.config.dev.js"
@@ -46,6 +46,7 @@
     "file-loader": "^6.0.0",
     "less-loader": "^6.2.0",
     "moment": "^2.27.0",
-    "style-loader": "^1.2.1"
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0"
   }
 }

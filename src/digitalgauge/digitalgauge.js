@@ -17,6 +17,7 @@ class DigitalGauge {
   _time = null;
   _unitTitle = '';
   _title = '';
+  _valueSuffix = '';
   get maxValue() {
     return this._maxValue;
   }
@@ -55,6 +56,13 @@ class DigitalGauge {
     this._title = val;
     this.showTitle && this.$doms && render(this.$doms.titleDiv, { text: val });
   }
+  get valueSuffix() {
+    return this._valueSuffix;
+  }
+  set valueSuffix(val = '') {
+    this._valueSuffix = val;
+    this.updateValue(this.value);
+  }
   donutStartAngle = 90;
   showValue = true;
   showMinMax = true;
@@ -84,7 +92,6 @@ class DigitalGauge {
     this.initDom();
   }
   setOption(options = {}) {
-    console.log(options);
     Object.keys(options).forEach(key => {
       if (isDef(options[key])) {
         this[key] = options[key];
@@ -173,7 +180,7 @@ class DigitalGauge {
     let y = numberFixRange(titleSize + valueSize + minmaxSize, h / 5, h / 2);
     y = showunit || showtime ? y : y + timeSize;
     this.drawInfo.rect = [x, y, w - x * 2, barH];
-    const minmaxStyle = { fontSize: `${minmaxSize}px`, top: `${y + 5}px`, padding: `0 ${x - minmaxSize * 2}px 0 ${x - minmaxSize}px ` };
+    const minmaxStyle = { fontSize: `${minmaxSize}px`, top: `${y + barH / 2 - minmaxSize}px`, padding: `0 ${x - minmaxSize * 2}px 0 ${x - minmaxSize}px ` };
     const titleStyle = { fontSize: `${titleSize}px` };
     const valueStyle = { fontSize: `${valueSize}px` };
     const timeStyle = { fontSize: `${timeSize}px` };
@@ -454,7 +461,7 @@ class DigitalGauge {
   updateValue(value) {
     if (!this.$doms) return;
     if (this.showValue) {
-      render(this.$doms.valueDiv, { text: value.toFixed(2) });
+      render(this.$doms.valueDiv, { text: value.toFixed(2) + this.valueSuffix });
     }
     this.draw(value);
   }

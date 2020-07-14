@@ -18,7 +18,8 @@ export const setText = (dom, text) => {
 export const setAttr = (dom, attrs = EmptyObj) => {
   Object.keys(attrs).forEach(key => {
     if (isDef(attrs[key])) {
-      dom[key] = attrs[key];
+      // dom[key] = attrs[key];
+      dom.setAttribute(key, attrs[key]);
     }
   });
 };

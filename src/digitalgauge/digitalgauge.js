@@ -1,4 +1,4 @@
-require('./style.less');
+require('./style.css');
 import moment from 'moment';
 const { render, bindMethods, unbindMethods, getPosition, eventToArg, valueToColor, valueColor, isUndef, isDef, noop, fontParse, numberFixRange } = require('../util');
 // 插件使用原生编写，任何框架均可使用

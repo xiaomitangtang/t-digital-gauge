@@ -1,4 +1,4 @@
-require('./style.less');
+require('./style.css');
 const { render, bindMethods, unbindMethods, getPosition, eventToArg, valueToColor, valueColor, isUndef, isDef, noop, getModuleDefault } = require('../../util');
 const bgImg = getModuleDefault(require('./knob.svg'));
 

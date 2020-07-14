@@ -1,4 +1,9 @@
-.knob-control-box {
+.knob-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.knob-box .knob-control-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -7,7 +12,7 @@
   overflow: hidden;
   transform: translate(-50%, -50%);
 }
-.knob-control-box .knob-bg {
+.knob-box .knob-control-box .knob-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -16,12 +21,12 @@
   height: 100%;
   user-select: none;
 }
-.knob-control-box .knob-bg img {
+.knob-box .knob-control-box .knob-bg img {
   display: block;
   width: 100%;
   height: 100%;
 }
-.knob-control-box .knob-canvas {
+.knob-box .knob-control-box .knob-canvas {
   position: absolute;
   top: 0;
   left: 0;
@@ -30,14 +35,14 @@
   height: 100%;
   user-select: none;
 }
-.knob-control-box .knob-pointer-box {
+.knob-box .knob-control-box .knob-pointer-box {
   position: relative;
   z-index: 3;
   width: 100%;
   height: 100%;
   user-select: none;
 }
-.knob-control-box .knob-pointer-box .knob-pointer {
+.knob-box .knob-control-box .knob-pointer-box .knob-pointer {
   position: absolute;
   top: 50%;
   left: 22%;
@@ -50,7 +55,7 @@
   user-select: none;
   cursor: pointer;
 }
-.knob-control-box .knob-value {
+.knob-box .knob-control-box .knob-value {
   position: absolute;
   display: flex;
   top: 35%;
@@ -63,7 +68,7 @@
   font-size: 900;
   user-select: none;
 }
-.knob-control-box .minmaxlabel {
+.knob-box .knob-control-box .minmaxlabel {
   position: absolute;
   display: flex;
   right: 20%;
@@ -74,7 +79,7 @@
   height: 4%;
   user-select: none;
 }
-.knob-control-box .knob-title {
+.knob-box .knob-control-box .knob-title {
   position: absolute;
   right: 20%;
   bottom: 2%;
@@ -84,7 +89,7 @@
   text-align: center;
   user-select: none;
 }
-.knob-control-box .konb-error {
+.knob-box .knob-control-box .konb-error {
   color: red;
   position: absolute;
   z-index: 2;

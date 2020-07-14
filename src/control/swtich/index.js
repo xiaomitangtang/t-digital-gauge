@@ -3,7 +3,7 @@ const thumb = getModuleDefault(require('./thumb.svg'));
 const thumBar = getModuleDefault(require('./thumb-bar.svg'));
 const thumbChecked = getModuleDefault(require('./thumb-checked.svg'));
 const thumbBarChecked = getModuleDefault(require('./thumb-bar-checked.svg'));
-require('./style.less');
+require('./style.css');
 
 class Switch {
   constructor(el, options) {

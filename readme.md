@@ -1,7 +1,7 @@
 ## t-digital-gauge 说明
 
 - 个人作品，纯 js 编写 canvas 实现
-- 仅一个依赖项 moment 如果不需要 可在源码中 digitalgauge.js 中进行去除
+- 仅一个依赖项 moment 如果不需要 可在源码中 digitalgauge.js 中进行去除 然后重新 build
 - 已经修复不可正常使用的问题
 - 如果好用，点个赞哟
 

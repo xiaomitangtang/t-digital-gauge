@@ -16,7 +16,7 @@
 
 ### 安装
 
-> npm install t-digital-gauge -S
+> npm install t-digital-gauge2 -S
 
 ### 使用
 

@@ -90,10 +90,10 @@
 
 ### demo
 
-![demo](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/1.png?raw=true)
+![水平垂直](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/bar.png?raw=true)
 
-![demo](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/2.png?raw=true)
+![间隔](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/arcsplit.png?raw=true)
 
-![knob](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/4.png?raw=true)
+![无间隔](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/arc.png?raw=true)
 
-![swtich](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/3.png?raw=true)
+![控制](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/control.png?raw=true)

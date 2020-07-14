@@ -200,7 +200,7 @@ class DigitalGauge {
     const y = h / 2;
     const lineWidth = unitW * this.gaugeWidthScale;
     this.drawInfo.lineWidth = lineWidth;
-    this.drawInfo.donutCircle = [x, y, r - lineWidth / 2];
+    this.drawInfo.donutCircle = [x, y, Math.max(r - lineWidth / 2, 0)];
     const titleSize = numberFixRange(r / 10, 12, 90);
     const valueSize = numberFixRange(r / 3, 16, 100);
     const timeSize = numberFixRange(r / 13, 12, 50);

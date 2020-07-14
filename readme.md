@@ -21,7 +21,7 @@
 ### 使用
 
 ```
-      import { Knob, Swtich, DigitalGauge } from './index'
+      import { Knob, Swtich, DigitalGauge } from 't-digital-gauge2'
       let knobBOX = document.getElementById('knob')
       let swtichBOX = document.getElementById('swtich')
       let digitalgaigeBOX = document.getElementById('digitalgaige')

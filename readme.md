@@ -1,5 +1,19 @@
 ## t-digital-gauge 说明
 
+- 个人作品，纯 js 编写 canvas 实现
+- 仅一个依赖项 moment 如果不需要 可在源码中 digitalgauge.js 中进行去除
+- 已经修复不可正常使用的问题
+- 如果好用，点个赞哟
+
+```
+ t-digital-gauge2对上一个版本进行了完全重写
+ 上一代版本是临时版本，建议废弃
+ 绘制的重原理上进行了重新实现
+ 支持更多参数
+
+
+```
+
 ### 安装
 
 > npm install t-digital-gauge -S
@@ -54,7 +68,8 @@
 | title             | 标题                            |                                                          |
 | time              | 时间                            |                                                          |
 | unitTitle         | 单位标题                        | 不显示时间时有效                                         |
-| value             | 展示的数值                      |                                                          |
+| value             | 展示的数值                      |
+| valueSuffix       | 数值的后缀                      |                                                          |
 | showMinMax        | 是否展示极值                    | donut 无效                                               |
 | showTitle         | 是否展示标题                    |                                                          |
 | showTimestamp     | 是否展示时间                    |                                                          |
@@ -76,7 +91,10 @@
 
 ### demo
 
-![demo](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/1.png)
-![demo](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/2.png)
-![knob](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/4.png)
-![swtich](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/3.png)
+![demo](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/1.png?raw=true)
+
+![demo](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/2.png?raw=true)
+
+![knob](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/4.png?raw=true)
+
+![swtich](https://github.com/xiaomitangtang/t-digital-gauge/blob/master/img/3.png?raw=true)

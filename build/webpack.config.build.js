@@ -44,9 +44,10 @@ module.exports = {
       }
     ]
   },
-  externals: {
-    moment: "moment"
-  },
+  // externals: {
+  //   moment: "moment",
+  //   dayjs: "dayjs"
+  // },
   plugins: [
     new CleanWebpackPlugin(),
     // new CompressionPlugin()

@@ -1,5 +1,6 @@
 require('./style.css');
-import moment from 'moment';
+// import moment from 'moment';
+import moment from 'dayjs';
 const { render, bindMethods, unbindMethods, getPosition, eventToArg, valueToColor, valueColor, isUndef, isDef, noop, fontParse, numberFixRange } = require('../util');
 // 插件使用原生编写，任何框架均可使用
 const ts = 20;

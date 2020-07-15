@@ -43,6 +43,7 @@
     "@babel/polyfill": "^7.8.7",
     "core-js": "^2.6.11",
     "css-loader": "^3.6.0",
+    "dayjs": "^1.8.29",
     "file-loader": "^6.0.0",
     "less-loader": "^6.2.0",
     "moment": "^2.27.0",

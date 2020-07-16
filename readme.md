@@ -34,6 +34,15 @@
       }, 2000)
 ```
 
+### dist
+
+```
+  dist进行了更新 增加了dayjs版本以及moment版本（均通过external  未打包进dist文件，根据项目需要，指定引入
+  增加了 knob swtich  digitalgaige.moment digitalgaige.dayjs 分包
+  knob  swtich包含图片资源，所以会比较大
+
+```
+
 ### 配置项（option）
 
 #### knob

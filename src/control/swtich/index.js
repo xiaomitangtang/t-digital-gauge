@@ -1,9 +1,9 @@
-const { render, bindMethods, unbindMethods, getPosition, eventToArg, valueToColor, valueColor, isUndef, isDef, noop, getModuleDefault } = require('../../util');
+const { render, isDef, noop, getModuleDefault } = require('../../util');
 const thumb = getModuleDefault(require('./thumb.svg'));
 const thumBar = getModuleDefault(require('./thumb-bar.svg'));
 const thumbChecked = getModuleDefault(require('./thumb-checked.svg'));
 const thumbBarChecked = getModuleDefault(require('./thumb-bar-checked.svg'));
-require('./style.css');
+require('./style.less');
 
 class Switch {
   constructor(el, options) {

@@ -32,6 +32,9 @@
       setInterval(() => {
         digitalgaige.value = Math.random() * 100
       }, 2000)
+
+
+      三个组件均提供 resize   destroy  方法，用于重新计算尺寸以及卸载组件
 ```
 
 ### dist

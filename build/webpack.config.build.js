@@ -2,17 +2,22 @@ const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // const CompressionPlugin = require('compression-webpack-plugin');//制作zip压缩包的插件
-
+const jionP = (str) => path.join(__dirname, str)
 
 module.exports = {
   mode: "production",
   entry: {
-    app: path.join(__dirname, '../src/index.js')
+    index: jionP('../src/index.moment.js'),
+    'index.dayjs': jionP('../src/index.dayjs.js'),
+    knob: jionP('../src/control/knob/index.js'),
+    swtich: jionP('../src/control/swtich/index.js'),
+    'digitalgauge.moment': jionP('../src/digitalgauge/digitalgauge.moment.js'),
+    'digitalgauge.dayjs': jionP('../src/digitalgauge/digitalgauge.dayjs.js'),
   },
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: jionP('../dist'),
     publicPath: "./",
-    filename: "index.js",
+    filename: "[name].js",
     libraryTarget: "commonjs2"
     // libraryTarget: "umd"
   },
@@ -44,10 +49,10 @@ module.exports = {
       }
     ]
   },
-  // externals: {
-  //   moment: "moment",
-  //   dayjs: "dayjs"
-  // },
+  externals: {
+    moment: "moment",
+    dayjs: "dayjs"
+  },
   plugins: [
     new CleanWebpackPlugin(),
     // new CompressionPlugin()

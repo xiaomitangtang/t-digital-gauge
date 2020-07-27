@@ -1,7 +1,5 @@
 require('./style.less');
-// import moment from 'moment';
-import moment from 'dayjs';
-import { render, isDef, fontParse, numberFixRange } from '../util';
+const { render, isDef, fontParse, numberFixRange, timeFormat } = require('../util');
 // 插件使用原生编写，任何框架均可使用
 const ts = 20;
 const PI2 = Math.PI * 2;
@@ -37,7 +35,8 @@ class DigitalGauge {
     return this._time;
   }
   set time(val) {
-    let str = moment(val).format('YYYY-MM-DD HH:mm:ss');
+    // let str = moment(val).format('YYYY-MM-DD HH:mm:ss');
+    str = timeFormat(val, 'YYYY-MM-DD HH:mm:ss')
     this._time = str;
     this.showTimestamp && this.$doms && render(this.$doms.timeOrunitTitleDiv, { text: str });
   }

@@ -1,6 +1,6 @@
 import Knob from './control/knob/index'
 import Swtich from './control/swtich/index'
-import DigitalGauge from './digitalgauge/digitalgauge.dayjs'
+import DigitalGauge from './digitalgauge/digitalgauge'
 if (window) {
   window.Knob = Knob
   window.Swtich = Swtich

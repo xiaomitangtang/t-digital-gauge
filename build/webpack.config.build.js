@@ -7,12 +7,10 @@ const jionP = (str) => path.join(__dirname, str)
 module.exports = {
   mode: "production",
   entry: {
-    index: jionP('../src/index.moment.js'),
-    'index.dayjs': jionP('../src/index.dayjs.js'),
+    index: jionP('../src/index.js'),
     knob: jionP('../src/control/knob/index.js'),
     swtich: jionP('../src/control/swtich/index.js'),
-    'digitalgauge.moment': jionP('../src/digitalgauge/digitalgauge.moment.js'),
-    'digitalgauge.dayjs': jionP('../src/digitalgauge/digitalgauge.dayjs.js'),
+    digitalgauge: jionP('../src/digitalgauge/digitalgauge.js'),
   },
   output: {
     path: jionP('../dist'),

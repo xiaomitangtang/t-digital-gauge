@@ -1,4 +1,4 @@
-import { Knob, Swtich, DigitalGauge } from './index.dayjs'
+import { Knob, Swtich, DigitalGauge } from './index'
 let knobBOX = document.getElementById('knob')
 let swtichBOX = document.getElementById('swtich')
 let digitalgaigeBOX = document.getElementById('digitalgaige')

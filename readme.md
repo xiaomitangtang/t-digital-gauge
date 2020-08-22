@@ -40,6 +40,27 @@
 
 ```
 
+### SSR(服务端渲染)
+
+```
+  由于库使用到了document进行节点创建，故在服务端渲染的情况下，如下使用  下面为nextjs，nuxt中使用类似
+  // import { DigitalGauge } from 't-digital-gauge2'
+  function getDigitalGauge() {
+    return process.browser ? require('t-digital-gauge2').DigitalGauge : function () { }
+  }
+  export default () => {
+    useEffect(() => {
+      const DigitalGauge = getDigitalGauge()
+      const div = document.getElementById('digitalgauge')
+      new DigitalGauge(div, { value: 50 })
+    }, [])
+    return <>
+      <h1>这是demo</h1>
+      <div id='digitalgauge' style={{ width: 200, height: 200, backgroundColor: "pink" }}></div>
+    </>
+  }
+```
+
 #### 补充
 
 ```
@@ -53,6 +74,7 @@
             Knob
               value errorMsg
         上面经过拦截的属性，修改会即时生效
+
 
 ```
 

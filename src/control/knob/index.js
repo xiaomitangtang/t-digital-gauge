@@ -37,7 +37,8 @@ class Knob {
   initDom() {
     this.$el.innerHtml = ''
     this.$el.innerText = ''
-    const rlwrapper = render('div', { className: 'knob-box' }, this.$el);
+    const fragment = document.createDocumentFragment()
+    const rlwrapper = render('div', { className: 'knob-box' }, fragment);
     const box = render('div', { className: 'knob-control-box' }, rlwrapper);
     const bgDiv = render('div', { className: 'knob-bg' }, box);
     const img = render(
@@ -95,6 +96,7 @@ class Knob {
       pointer,
       errorDiv,
     };
+    render(fragment, {}, this.$el)
     this.resize();
   }
   resize() {

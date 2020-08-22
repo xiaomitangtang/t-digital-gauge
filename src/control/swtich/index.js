@@ -28,6 +28,7 @@ class Switch {
   initDom() {
     this.$el.innerHtml = ''
     this.$el.innerText = ''
+    const fragment = document.createDocumentFragment()
     const box = render(
       'div',
       {
@@ -36,7 +37,7 @@ class Switch {
           click: this.onClick,
         },
       },
-      this.$el,
+      fragment
     );
     const tipSpan = render('span', { className: 'offline-tip', text: this.errorMsg }, box);
     const titleDiv = render('div', { className: 'switch-title' }, box);
@@ -58,6 +59,7 @@ class Switch {
       labelOnDiv,
     };
     this.value = this.value;
+    render(fragment, {}, this.$el)
     this.resize();
   }
   ratio = 2.815;

@@ -102,7 +102,9 @@ class DigitalGauge {
   initDom() {
     this.$el.innerHtml = ''
     this.$el.innerText = ''
-    const box = render('div', { className: `digital-gauge ${this.gaugeType}` }, this.$el);
+    const fragment = document.createDocumentFragment()
+
+    const box = render('div', { className: `digital-gauge ${this.gaugeType}` }, fragment);
     const canvas = render('canvas', { className: `digital-canvas` }, box);
     this.ctx = canvas.getContext('2d');
     window.ctx = this.ctx;
@@ -128,6 +130,7 @@ class DigitalGauge {
       maxSpan,
       timeOrunitTitleDiv,
     };
+    render(fragment, {}, this.$el)
     this.resize();
   }
 

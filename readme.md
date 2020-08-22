@@ -25,16 +25,35 @@
       let swtichBOX = document.getElementById('swtich')
       let digitalgaigeBOX = document.getElementById('digitalgaige')
 
-      let knob = new Knob(knobBOX)
-      let swtich = new Swtich(swtichBOX)
-      let digitalgaige = new DigitalGauge(digitalgaigeBOX)
+      let options={}    //option 是可选参数，内容为下面的配置项
+
+      let knob = new Knob(knobBOX,options)
+      let swtich = new Swtich(swtichBOX,options)
+      let digitalgaige = new DigitalGauge(digitalgaigeBOX,options)
 
       setInterval(() => {
         digitalgaige.value = Math.random() * 100
       }, 2000)
 
 
-      三个组件均提供 resize   destroy  方法，用于重新计算尺寸以及卸载组件
+
+
+```
+
+#### 补充
+
+```
+        三个组件均提供 resize   destroy  方法，用于重新计算尺寸以及卸载组件
+
+        组件没有使用双向绑定，但是通过setter对部分属性进行拦截
+        比如 DigitalGauge
+              value errorMsg  maxValue minValue time unitTitle title valueSuffix
+            Swtich
+              value errorMsg
+            Knob
+              value errorMsg
+        上面经过拦截的属性，修改会即时生效
+
 ```
 
 ### dist

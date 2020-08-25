@@ -36,7 +36,7 @@ class DigitalGauge {
   }
   set time(val) {
     // let str = moment(val).format('YYYY-MM-DD HH:mm:ss');
-    str = timeFormat(val, 'YYYY-MM-DD HH:mm:ss')
+    let str = timeFormat(val, 'YYYY-MM-DD HH:mm:ss')
     this._time = str;
     this.showTimestamp && this.$doms && render(this.$doms.timeOrunitTitleDiv, { text: str });
   }
@@ -88,8 +88,12 @@ class DigitalGauge {
   timestampFormat = 'yyyy-MM-dd HH:mm:ss';
 
   _init() {
-    this.setOption(this.$options);
+    let { value, ...restOption } = this.$options
+    this.setOption(restOption);
     this.initDom();
+    if (isDef(value)) {
+      this.value = value
+    }
   }
   setOption(options = {}) {
     Object.keys(options).forEach(key => {
@@ -107,7 +111,6 @@ class DigitalGauge {
     const box = render('div', { className: `digital-gauge ${this.gaugeType}` }, fragment);
     const canvas = render('canvas', { className: `digital-canvas` }, box);
     this.ctx = canvas.getContext('2d');
-    window.ctx = this.ctx;
     const textDiv = render('div', { className: `digital-texts` }, box);
     const titleDiv = render('div', { className: `digital-title`, text: this.showTitle ? this.title : '', style: fontParse(this.titleFont) }, textDiv);
     const valueDiv = render('div', { className: `digital-value`, text: '', style: fontParse(this.valueFont) }, textDiv);
